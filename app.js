@@ -389,3 +389,4 @@ footer.from("#page9-bottom .path8", {
 });
 }
 
+footerFun();
