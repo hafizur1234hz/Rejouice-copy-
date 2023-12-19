@@ -496,10 +496,13 @@ nav h4 {
   -ms-user-select: none;
   user-select: none;
   background-color: #0E0E0E;
+  overflow: hidden;
 }
 #page9-top{
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
+  /* transition: all 0.6s cubic-bezier(.43,.195,.02,1); */
 }
 .page9-left h3{
   color: #c7c5bc;
@@ -539,6 +542,8 @@ nav h4 {
   display: flex;
   justify-content: space-between;
   margin-top: 15vw;
+  align-items: center;
+  overflow: hidden;
 }
 .page9-le p{
   font-size: 17px;
@@ -551,4 +556,12 @@ nav h4 {
 .page9-ri p{
   font-size: 17px;
   color: #c7c5bc;
+}
+.p9ri{
+  padding: 0 20px;
+  margin-left: 3vw;
+}
+#page9-bottom{
+  margin-top: 3vw;
+  overflow: hidden;
 }

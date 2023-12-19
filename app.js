@@ -212,29 +212,180 @@ function page7Animation() {
 }
 page7Animation();
 
-const lt = gsap.timeline();
-lt.from("#loader h3", {
-  x: 50,
+function loaderH1() {
+  const lt = gsap.timeline();
+  lt.from("#loader h3", {
+    x: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+  });
+  lt.to("#loader h3", {
+    x: -10,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+  });
+  lt.to("#loader", {
+    opacity: 0,
+  });
+  lt.from("#page1-content h1 span", {
+    y: 200,
+    opacity: 0,
+    stagger: 0.02,
+    duration: 0.5,
+    delay: -0.5,
+  });
+  lt.to("#loader", {
+    display: "none",
+  });
+}
+loaderH1();
+
+function footerFun(){
+  const footer = gsap.timeline();
+
+footer.from("#page9-top", {
+  y: -250,
   opacity: 0,
   duration: 1,
   stagger: 0.1,
+  scrollTrigger: {
+    trigger: "#page8",
+    scroller: "#main",
+    start: "40vh 40%",
+    end: "50vh 37%",
+    scrub: 5,
+    marker: true,
+  },
 });
-lt.to("#loader h3", {
-  x: -10,
+
+footer.from("#page9-mid", {
+  y: -120,
   opacity: 0,
-  duration: 1,
-  stagger: 0.1,
+  duration: 2,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: "#page9",
+    scroller: "#main",
+    start: "top 40%",
+    end: "top 37%",
+    scrub: 3,
+  },
 });
-lt.to("#loader", {
+
+footer.from("#page9-bottom .path1", {
+  y: -220,
   opacity: 0,
+  duration: 0.4,
+  stagger: 0.3,
+  delay: 0.2,
+  scrollTrigger: {
+    trigger: "#page9",
+    scroller: "#main",
+    start: "30vh 40%",
+    end: "50vh 37%",
+    scrub: 2,
+  },
 });
-lt.from("#page1-content h1 span", {
-  y: 200,
+
+footer.from("#page9-bottom .path2", {
+  y: -220,
   opacity: 0,
-  stagger: 0.02,
+  duration: 0.3,
+  stagger: 0.3,
+  delay: 0.2,
+  scrollTrigger: {
+    trigger: "#page9",
+    scroller: "#main",
+    start: "30vh 40%",
+    end: "50vh 37%",
+    scrub: 2,
+  },
+});
+footer.from("#page9-bottom .path3", {
+  y: -220,
+  opacity: 0,
   duration: 0.5,
-  delay: -0.5,
+  stagger: 0.3,
+  delay: 0.3,
+  scrollTrigger: {
+    trigger: "#page9",
+    scroller: "#main",
+    start: "30vh 40%",
+    end: "50vh 37%",
+    scrub: 3,
+  },
 });
-lt.to("#loader", {
-  display: "none",
+footer.from("#page9-bottom .path4", {
+  y: -220,
+  opacity: 0,
+  duration: 0.7,
+  stagger: 0.3,
+  delay: 0.4,
+  scrollTrigger: {
+    trigger: "#page9",
+    scroller: "#main",
+    start: "30vh 40%",
+    end: "50vh 37%",
+    scrub: 4,
+  },
 });
+footer.from("#page9-bottom .path5", {
+  y: -220,
+  opacity: 0,
+  duration: 0.9,
+  stagger: 0.3,
+  delay: 0.5,
+  scrollTrigger: {
+    trigger: "#page9",
+    scroller: "#main",
+    start: "30vh 40%",
+    end: "50vh 37%",
+    scrub: 4,
+  },
+});
+footer.from("#page9-bottom .path6", {
+  y: -220,
+  opacity: 0,
+  duration: 1.1,
+  stagger: 0.3,
+  delay: 0.5,
+  scrollTrigger: {
+    trigger: "#page9",
+    scroller: "#main",
+    start: "30vh 40%",
+    end: "50vh 37%",
+    scrub: 3,
+  },
+});
+footer.from("#page9-bottom .path7", {
+  y: -220,
+  opacity: 0,
+  duration: 1.3,
+  stagger: 0.3,
+  delay: 0.3,
+  scrollTrigger: {
+    trigger: "#page9",
+    scroller: "#main",
+    start: "30vh 40%",
+    end: "50vh 37%",
+    scrub: 2,
+  },
+});
+footer.from("#page9-bottom .path8", {
+  y: -220,
+  opacity: 0,
+  duration: 1.4,
+  stagger: 0.3,
+  delay: 0.3,
+  scrollTrigger: {
+    trigger: "#page9",
+    scroller: "#main",
+    start: "30vh 40%",
+    end: "50vh 37%",
+    scrub: 2,
+  },
+});
+}
+
